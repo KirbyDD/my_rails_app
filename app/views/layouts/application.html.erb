@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to "Register", "/users/new" %>
+    </nav>
+    <% flash.each do |type, message| %>
+      <p><%= message %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
