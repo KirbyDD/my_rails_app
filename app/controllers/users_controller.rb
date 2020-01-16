@@ -9,8 +9,9 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to "/"
     else
-      flash[:notice] = "Account not created."
-      render :new
+      error = Error.new
+      flash[:notice] = error.error_message(user)
+      redirect_to "/users/new"
     end
   end
 
