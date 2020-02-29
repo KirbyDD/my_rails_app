@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191222210021) do
+ActiveRecord::Schema.define(version: 20200229055634) do
+
+  create_table "animes", force: :cascade do |t|
+    t.string "english_title"
+    t.string "japanese_title"
+    t.string "kanji_title"
+    t.string "synopsis"
+    t.string "avg_rating"
+    t.string "start_date"
+    t.string "end_date"
+    t.string "age_rating"
+    t.string "age_rating_guide"
+    t.string "poster_img_tiny"
+    t.string "poster_img_small"
+    t.string "poster_img_medium"
+    t.string "poster_img_large"
+    t.string "poster_img_original"
+    t.integer "num_of_episodes"
+    t.string "youtube_link"
+    t.boolean "nsfw"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
