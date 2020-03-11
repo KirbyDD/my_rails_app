@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <%= image_tag('anime-street.jpg', class: 'anime-background') %>
     <header>
       <h1>Fake Reddit</h1>
       <nav>
@@ -24,7 +25,6 @@
     <% flash.each do |type, message| %>
       <p><%= message %></p>
     <% end %>
-
     <%= yield %>
   </body>
 </html>
