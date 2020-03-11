@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200229055634) do
+ActiveRecord::Schema.define(version: 20200311053243) do
 
   create_table "animes", force: :cascade do |t|
     t.string "english_title"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 20200229055634) do
     t.integer "num_of_episodes"
     t.string "youtube_link"
     t.boolean "nsfw"
+  end
+
+  create_table "user_animes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "anime_id"
+    t.integer "current_episode", default: 1
+    t.string "reminder", default: "No Reminder Set"
+    t.index ["anime_id"], name: "index_user_animes_on_anime_id"
+    t.index ["user_id"], name: "index_user_animes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
