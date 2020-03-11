@@ -1,0 +1,28 @@
+.animes-container {
+  background-color: #3c1d73cf;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
+}
+
+.animes {
+  width: 175px;
+  margin-top: 15px;
+}
+
+.anime-title {
+  color: #B6A3DA;
+  background: #694BA1;
+  margin: 0;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.img-small {
+  width: 175px;
+}
