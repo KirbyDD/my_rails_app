@@ -13,12 +13,13 @@
     <header>
       <h1>Fake Reddit</h1>
       <nav>
+        <%= link_to "Anime", '/animes' %> |
         <% if current_user %>
-          <p>Welcome <%= current_user.username %></p>
-          <%= link_to "Logout", "/logout" %>
+        <p>Welcome <%= current_user.username %></p>
+        <%= link_to "Logout", "/logout" %>
         <% else %>
-          <%= link_to "Register", "/users/new" %> |
-          <%= link_to "Login", "/login" %>
+        <%= link_to "Register", "/users/new" %> |
+        <%= link_to "Login", "/login" %>
         <% end %>
       </nav>
     </header>
