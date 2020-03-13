@@ -1,8 +1,10 @@
 <main class="animes-container">
   <% @animes.each do |anime| %>
-    <article class="anime-<%= anime.id %> animes">
-      <h3 class="anime-title"><%= anime.japanese_title %> </h3>
-      <%= image_tag(anime.poster_img_small, class: "img-small") %>
-    </article>
+    <%= link_to "/animes/#{anime.japanese_title}" do %>
+      <article class="anime-<%= anime.id %> animes">
+        <h3 class="anime-title"><%= "#{anime.japanese_title}" %></h3>
+        <%= image_tag(anime.poster_img_small, class: "img-small") %>
+      </article>
+    <% end %>
   <% end %>
 </main>
